@@ -25,7 +25,7 @@ symlink_item() {
 
 current_dir=$(pwd)
 config_folders=("nvim")
-config_files=(".tmux.conf")
+config_files=(".tmux.conf" ".zshrc")
 base_config_dir="${HOME}/.config"
 dot_files_dir="${HOME}/dot-files"
 base_file_dir="${HOME}"

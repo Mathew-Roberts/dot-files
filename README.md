@@ -10,6 +10,10 @@ Welcome to my development setup environment. Please read the below as it will he
 
 2. Tmux and Tmux plugin manager (tpm) - Tmux is available in pretty much all linux environments. The config file for tmux in the repo is less sensitive to versioning so hopefully it should work natively with your preferred version of linux. You will need to install the Tmux plugin manager which can be found here https://github.com/tmux-plugins/tpm. The installation is very simple and complete instructions are available on the link. Please read the tpm documentation carefully because there are some things you need to do in order to ensure that the plugins are working as expected. (Main pitfall is usually people forgetting to do Prefix + I to install the plugins after you have added them)
 
+3. OhMyZsh (Optional) - I use Zsh as my default terminal so that is why there is a .zshrc dot-file here. I'm yet to become a linux master so the zshrc is bare for the time being.
+4. Ripgrep - This is needed to ensure that the grepping features of some of the neovim plugins works as expected.
+5. fzf (Optional) - This has made my terminal experience much better and I would highly recommend checking it out. https://github.com/junegunn/fzf
+
 ### Files
 
 These are some very simple dot-files. There are only 3 files in here which I find to be very important to my dev workflow - they are listed below.

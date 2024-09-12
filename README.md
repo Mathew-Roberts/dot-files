@@ -8,7 +8,9 @@ Welcome to my development setup environment. Please read the below as it will he
 
 *Remark*: For those who use Guix as a package manager, Neovim is available within guix however the version may be quite outdated depending on what version of Guix you have installed. Please run ```guix show neovim``` and ensure that the version is > v0.9.5 before installing.
 
-### Intro
+2. Tmux and Tmux plugin manager (tpm) - Tmux is available in pretty much all linux environments. The config file for tmux in the repo is less sensitive to versioning so hopefully it should work natively with your preferred version of linux. You will need to install the Tmux plugin manager which can be found here https://github.com/tmux-plugins/tpm. The installation is very simple and complete instructions are available on the link. Please read the tpm documentation carefully because there are some things you need to do in order to ensure that the plugins are working as expected. (Main pitfall is usually people forgetting to do Prefix + I to install the plugins after you have added them)
+
+### Files
 
 These are some very simple dot-files. There are only 3 files in here which I find to be very important to my dev workflow - they are listed below.
 

@@ -47,7 +47,13 @@ lint.linters_by_ft = {
 
 #### Plugins:
 
-<u>Required</u>
+*Required*
+- tree-sitter 
+Tree-sitter in Neovim provides fast and accurate syntax highlighting, code navigation, and structural editing by parsing code into an abstract syntax tree, enabling better understanding and manipulation of source code compared to traditional regex-based methods.
+- nvim-lspconfig
+This plugin simplifies the setup and configuration of Language Server Protocol (LSP) servers, enabling features like autocompletion, diagnostics, code navigation, and more, to enhance development workflows with minimal configuration required.
+- 
+
 
 
 2) **.tmux.conf* This is the tmux configuration file. This is where you can set all the necessary keybindings and plugins. The plugins in the config file are installed by the tmux plugin manager (see prerequisites), unlike Neovim though you have to manually tell by tpm to install the plugins by doing Prefix + I. By default the Prefix for tmux is Ctrl + B, however I have remapped this to Ctrl + A as its more comfortable to type on your standard column staggered QWERTY keyboard.

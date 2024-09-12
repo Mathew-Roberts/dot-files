@@ -44,3 +44,5 @@ lint.linters_by_ft = {
 }
 ~~~
 1.1 Nvim file structure - The directory structure is highly modularised, where each *plugin is self contained in its own lua file; I believe that this makes for a more manageable and more maintainable repo. I have split the plugins up into what I deem to be *required* and *additional*. I would recommend spending some time understanding the plugins in *required* first before moving to *additional*. Happy Neovim-ing!
+
+2) **.tmux.conf* This is the tmux configuration file. This is where you can set all the necessary keybindings and plugins. The plugins in the config file are installed by the tmux plugin manager (see prerequisites), unlike Neovim though you have to manually tell by tpm to install the plugins by doing Prefix + I. By default the Prefix for tmux is Ctrl + B, however I have remapped this to Ctrl + A as its more comfortable to type on your standard column staggered QWERTY keyboard.

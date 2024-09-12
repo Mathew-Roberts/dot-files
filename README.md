@@ -3,6 +3,11 @@ Welcome to my development setup environment. Please read the below as it will he
 
 **NOTE: The Neovim config in these dot-files are designed to work with v0.9.5. Results using later or earlier versions of Neovim may vary. By default, the plugins will try to install the latest versions of themselves unless otherwise explicitly versioned in the lua file; if you find that some of the plugins are not working, I would suggest pinning the version in the plugin file for a more stable experience. Or, if you are feeling particularly brave, and/or are already familiar with lua and Neovim, you are more than welcome to install the latest version of Neovim and troubleshoot from there.**
 
+### Prerequisites
+1. Neovim - If you haven't got it installed yet, visit this page here https://github.com/neovim/neovim/releases and choose the version of Neovim you wish to install. You can install Neovim a variety of ways snap, apt, brew (mac) etc, however, if you don't have root access, for example a work machine. I'd recommend downloading the nvim.appimage file and symlinking/moving the and renaming it to nvim in your local binary folder. If you are on linux this will be ~/.local/bin - more complete instructions about how to download the appimage can be found on the repository page.
+
+*Remark*: For those who use Guix as a package manager, Neovim is available within guix however the version may be quite outdated depending on what version of Guix you have installed. Please run ```guix show neovim``` and ensure that the version is > v0.9.5 before installing.
+
 ### Intro
 
 These are some very simple dot-files. There are only 3 files in here which I find to be very important to my dev workflow - they are listed below.

@@ -52,7 +52,8 @@ lint.linters_by_ft = {
 Tree-sitter in Neovim provides fast and accurate syntax highlighting, code navigation, and structural editing by parsing code into an abstract syntax tree, enabling better understanding and manipulation of source code compared to traditional regex-based methods.
 - nvim-lspconfig
 This plugin simplifies the setup and configuration of Language Server Protocol (LSP) servers, enabling features like autocompletion, diagnostics, code navigation, and more, to enhance development workflows with minimal configuration required.
-- 
+- telescope
+telescope is a highly customizable fuzzy finder that allows users to efficiently search, filter, and preview files, buffers, LSP symbols, and more, providing a powerful interface for navigating and managing code within the editor
 
 
 

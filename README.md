@@ -46,3 +46,12 @@ lint.linters_by_ft = {
 1.1 Nvim file structure - The directory structure is highly modularised, where each *plugin is self contained in its own lua file; I believe that this makes for a more manageable and more maintainable repo. I have split the plugins up into what I deem to be *required* and *additional*. I would recommend spending some time understanding the plugins in *required* first before moving to *additional*. Happy Neovim-ing!
 
 2) **.tmux.conf* This is the tmux configuration file. This is where you can set all the necessary keybindings and plugins. The plugins in the config file are installed by the tmux plugin manager (see prerequisites), unlike Neovim though you have to manually tell by tpm to install the plugins by doing Prefix + I. By default the Prefix for tmux is Ctrl + B, however I have remapped this to Ctrl + A as its more comfortable to type on your standard column staggered QWERTY keyboard.
+
+3) *.zshrc* - This is purely personal preference. I happen to like the customizability of Zsh, with the ability to have plugins for git, themes, fzf and many many others. I'm yet to explore the full capability of this so I cannot say much on the topic.
+
+### Installation 
+Below is my recommend way of installing the setup.
+1. Fork this repo to your own github.
+2. Clone the repo to your home directory called ~/dot-files
+3. Run the install.sh script (All this script does in symlink the files in the repo to the respective places in your home directory where the configuration files/folders are expected to be. Please be aware that this script is very crude and not well tested. If you find that it is not working for you I would recommend doing this manually.
+

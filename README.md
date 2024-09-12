@@ -53,6 +53,14 @@ Tree-sitter in Neovim provides fast and accurate syntax highlighting, code navig
 This plugin simplifies the setup and configuration of Language Server Protocol (LSP) servers, enabling features like autocompletion, diagnostics, code navigation, and more, to enhance development workflows with minimal configuration required.
 - *telescope*
 Telescope is a highly customizable fuzzy finder that allows users to efficiently search, filter, and preview files, buffers, LSP symbols, and more, providing a powerful interface for navigating and managing code within the editor
+- *oil*
+Personal favourite, oil is a file explorer plugin that presents directories as editable buffers, allowing users to navigate and manage their file system as if interacting with regular text, enabling intuitive file operations and streamlined directory management.
+- *nvim-dap*
+nvim-dap in Neovim provides a flexible and powerful debugging interface that integrates with various Debug Adapter Protocol (DAP) servers, enabling features like breakpoints, step-through debugging, variable inspection, and more, directly within the editor to enhance the debugging workflow for multiple programming languages.
+- *conform*
+conform.nvim is a lightweight and extensible auto-formatting plugin that integrates with various code formatters, allowing users to easily format their code on demand or automatically, while providing a simple interface to configure formatting behavior across multiple languages.
+- *nvim-lint*
+nvim-lint is a minimal and configurable plugin that integrates with external linting tools to provide real-time or on-demand diagnostics, helping developers identify and fix code issues such as errors, warnings, and stylistic problems across multiple languages directly within the editor.
 
 2) **.tmux.conf** This is the tmux configuration file. This is where you can set all the necessary keybindings and plugins. The plugins in the config file are installed by the tmux plugin manager (see prerequisites), unlike Neovim though you have to manually tell by tpm to install the plugins by doing Prefix + I. By default the Prefix for tmux is Ctrl + B, however I have remapped this to Ctrl + A as its more comfortable to type on your standard column staggered QWERTY keyboard.
 

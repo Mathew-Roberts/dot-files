@@ -45,9 +45,8 @@ lint.linters_by_ft = {
 ~~~
 *Nvim file structure* - The directory structure is highly modularised, where each *plugin is self contained in its own lua file; I believe that this makes for a more manageable and more maintainable repo. I have split the plugins up into what I deem to be *required* and *additional*. I would recommend spending some time understanding the plugins in *required* first before moving to *additional*. Happy Neovim-ing!
 
-#### Plugins:
+#### Notable Plugins:
 
-*Required*
 - *tree-sitter* 
 Tree-sitter in Neovim provides fast and accurate syntax highlighting, code navigation, and structural editing by parsing code into an abstract syntax tree, enabling better understanding and manipulation of source code compared to traditional regex-based methods.
 - *nvim-lspconfig*

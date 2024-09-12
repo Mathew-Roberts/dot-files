@@ -54,12 +54,9 @@ This plugin simplifies the setup and configuration of Language Server Protocol (
 - *telescope*
 Telescope is a highly customizable fuzzy finder that allows users to efficiently search, filter, and preview files, buffers, LSP symbols, and more, providing a powerful interface for navigating and managing code within the editor
 
+2) **.tmux.conf** This is the tmux configuration file. This is where you can set all the necessary keybindings and plugins. The plugins in the config file are installed by the tmux plugin manager (see prerequisites), unlike Neovim though you have to manually tell by tpm to install the plugins by doing Prefix + I. By default the Prefix for tmux is Ctrl + B, however I have remapped this to Ctrl + A as its more comfortable to type on your standard column staggered QWERTY keyboard.
 
-
-
-2) **.tmux.conf* This is the tmux configuration file. This is where you can set all the necessary keybindings and plugins. The plugins in the config file are installed by the tmux plugin manager (see prerequisites), unlike Neovim though you have to manually tell by tpm to install the plugins by doing Prefix + I. By default the Prefix for tmux is Ctrl + B, however I have remapped this to Ctrl + A as its more comfortable to type on your standard column staggered QWERTY keyboard.
-
-3) *.zshrc* - This is purely personal preference. I happen to like the customizability of Zsh, with the ability to have plugins for git, themes, fzf and many many others. I'm yet to explore the full capability of this so I cannot say much on the topic.
+3) **.zshrc** - This is purely personal preference. I happen to like the customizability of Zsh, with the ability to have plugins for git, themes, fzf and many many others. I'm yet to explore the full capability of this so I cannot say much on the topic.
 
 ### Installation 
 Below is my recommend way of installing the setup.

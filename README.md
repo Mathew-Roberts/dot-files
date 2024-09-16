@@ -72,5 +72,6 @@ gitsigns.nvim provides Git integration by displaying inline Git changes, such as
 Below is my recommend way of installing the setup.
 1. Fork this repo to your own github.
 2. Clone the repo to your home directory called ~/dot-files
-3. Run the install.sh script (All this script does in symlink the files in the repo to the respective places in your home directory where the configuration files/folders are expected to be. Please be aware that this script is very crude and not well tested. If you find that it is not working for you I would recommend doing this manually.
-
+3. Install GNU Stow using your favourite linux package manager. Please see documentation on GNU Stow as its a great tool for maintaining your dot-files.
+4. Navigate to your dot-files/ directory and execute the following command ~~~stow .~~~, this will symlink all of your dot files to your home directory. NOTE: It is suggested that you configure your dot-files repo as if they were located in your home directory at "~/".
+5. Open a new terminal session and check that the symlinks have been correctly set. If not, double check that ~~~stow .~~~ was called in the correct directory.

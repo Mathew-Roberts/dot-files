@@ -158,7 +158,7 @@ return { -- LSP Configuration & Plugins
     -- for you, so that they are available from within Neovim.
     local ensure_installed = vim.tbl_keys(servers or {})
 
-    local extra_installs = { 'flake8', 'mypy', 'jsonlint', 'stylua', 'isort', 'black', 'ruff', 'fixjson', 'debugpy', 'clang-format' }
+    local extra_installs = { 'flake8', 'mypy', 'markdownlint', 'jsonlint', 'stylua', 'isort', 'black', 'ruff', 'fixjson', 'debugpy', 'clang-format' }
     vim.list_extend(ensure_installed, extra_installs)
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

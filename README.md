@@ -16,6 +16,8 @@ Welcome to my development setup environment. Please read the below as it will he
    
 5. fzf (Optional) - This has made my terminal experience much better and I would highly recommend checking it out. https://github.com/junegunn/fzf
 
+6. Zoxide (Optional) - A better cd (change directory) terminal navigator. Zoxide keeps track of your most visited directories allowing you to navigate to them via only a partial match to the directory.
+
 ### Files
 
 These are some very simple dot-files. There are only 3 files in here which I find to be very important to my dev workflow - they are listed below.
@@ -25,7 +27,7 @@ These are some very simple dot-files. There are only 3 files in here which I fin
 3. .zshrc
 
 1) **.config/nvim** - This contains all my neovim setup configurations. It should work natively with Python, with Ruff and Pyright as the chosen LSP's. The LSP's should be able to resolve all imports automatically if neovim is started with a virtual environment. For example, if you use guix, if you do ```guix shell -D <package>``` and start Neovim inside this shell, all imports/definitions/references and refactor capabilities should be available to you out of the box. You may notice that there are no global formatters or linters set for Python. This is because some projects that I work on require different configurations per project, e.g Black and Flake8 for project A and Ruff and Semgrep for project B. There is a nice feature in Neovim, similar to the .vscode/ in VSCode where you can create a project specific lua file *.nvim.lua* in your project root; if you are working in a git repository, this would be at the same tree level as a .gitignore, or .git folder. Please see a below example of how you can set up this file.
-~~~
+~~~lua
 local conform = require("conform")
 conform.setup({
       formatters_by_ft = {

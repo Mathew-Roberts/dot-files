@@ -7,3 +7,12 @@
 [submodule "dot-oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	path = dot-oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "dot-tmux/plugins/tmux"]
+	path = dot-tmux/plugins/tmux
+	url = https://git::@github.com/dracula/tmux
+[submodule "dot-tmux/plugins/tpm"]
+	path = dot-tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "dot-tmux/plugins/vim-tmux-navigator"]
+	path = dot-tmux/plugins/vim-tmux-navigator
+	url = https://git::@github.com/christoomey/vim-tmux-navigator

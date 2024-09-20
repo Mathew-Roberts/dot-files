@@ -75,7 +75,7 @@ Below is my recommend way of installing the setup.
 1. Fork this repo to your own github.
 2. Clone the repo to your home directory called ~/dot-files
 3. Install GNU Stow using your favourite linux package manager. Please see documentation on GNU Stow as its a great tool for maintaining your dot-files.
-4. Navigate to your dot-files/ directory and execute the following command ```stow --dotfiles --ignore="dot-oh-my-zsh" .```, this will symlink all of your dot files to your home directory. The ```--dotfiles``` option tells stow to replace the prefix ```dot-``` with a ```.``` when creating the symlink to your target directory, for example ```.bashrc -> ~/dot-files/dot-bashrc```; this means that your dot-files directory no longer needs to contain hidden files. Files not prefixed with ```dot-``` will be treated normally. 
+4. Navigate to your dot-files/ directory and execute the following command ```stow --dotfiles .```, this will symlink all of your dot files to your home directory. The ```--dotfiles``` option tells stow to replace the prefix ```dot-``` with a ```.``` when creating the symlink to your target directory, for example ```.bashrc -> ~/dot-files/dot-bashrc```; this means that your dot-files directory no longer needs to contain hidden files. Files not prefixed with ```dot-``` will be treated normally. 
 
 NOTE: You need to configure your dot-files repo as if they were located in your home directory at "~/". Also, I am choosing to ignore the dot-oh-my-zsh directory because it doesn't need to be symlinked to somewhere in my home directory. There is an env var ```ZSH_CUSTOM``` which allows you to set a custom file path to your user-specific zsh configurations - by default, this is set to ```~/dot-files/dot-oh-my-zsh/custom/```.
 

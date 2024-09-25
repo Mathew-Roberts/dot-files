@@ -5,8 +5,9 @@ opacity = 0.9
 padding.x = 10
 padding.y = 10
 
-decorations = "Full"
-decorations_theme_variant = "Light" # "Dark"
+decorations = "Buttonless"
+
+option_as_alt = "Both"
 
 [font]
 

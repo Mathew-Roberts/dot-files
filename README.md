@@ -8,7 +8,7 @@ Welcome to my development setup environment. Please read the below as it will he
 
 *Remark*: For those who use Guix as a package manager, Neovim is available within guix however the version may be quite outdated depending on what version of Guix you have installed. Please run ```guix show neovim``` and ensure that the version is > v0.9.5 before installing.
 
-2. Tmux and Tmux plugin manager (tpm) - Tmux is available in pretty much all linux environments. The config file for tmux in the repo is less sensitive to versioning so hopefully it should work natively with your preferred version of linux. You will need to install the Tmux plugin manager which can be found here https://github.com/tmux-plugins/tpm. The installation is very simple and complete instructions are available on the link. Please read the tpm documentation carefully because there are some things you need to do in order to ensure that the plugins are working as expected. (Main pitfall is usually people forgetting to do Prefix + I to install the plugins after you have added them)
+2. Tmux - Tmux is available in pretty much all linux environments. The config file for tmux in the repo is less sensitive to versioning so hopefully it should work natively with your preferred version of linux. 
 
 3. Ripgrep - This is needed to ensure that the grepping features of some of the neovim plugins works as expected.
    
@@ -20,13 +20,15 @@ Welcome to my development setup environment. Please read the below as it will he
 
 ### Files
 
-These are some very simple dot-files. There are only 3 files in here which I find to be very important to my dev workflow - they are listed below.
+There is a mix of some very simple dot files and then some more complex ones. Items 1), 2) and 3) are written by me, however items 4) and 5) are git submodules of different pacakages. I have elected to keep them as submodules to avoid the amount of installs required to get the development environment to work. I'm intending this to be as plug and play as possible.
 
-1. .config/nvim
-2. .tmux.conf
-3. .zshrc
+1. dot-config/nvim
+2. dot-tmux.conf
+3. dot-zshrc
+4. dot-oh-my-zsh/
+5. dot-tmux/
 
-1) **.config/nvim** - This contains all my neovim setup configurations. It should work natively with Python, with Ruff and Pyright as the chosen LSP's. The LSP's should be able to resolve all imports automatically if neovim is started with a virtual environment. For example, if you use guix, if you do ```guix shell -D <package>``` and start Neovim inside this shell, all imports/definitions/references and refactor capabilities should be available to you out of the box. You may notice that there are no global formatters or linters set for Python. This is because some projects that I work on require different configurations per project, e.g Black and Flake8 for project A and Ruff and Semgrep for project B. There is a nice feature in Neovim, similar to the .vscode/ in VSCode where you can create a project specific lua file *.nvim.lua* in your project root; if you are working in a git repository, this would be at the same tree level as a .gitignore, or .git folder. Please see a below example of how you can set up this file.
+1) **dot-config/nvim** - This contains all my neovim setup configurations. It should work natively with Python, with Ruff and Pyright as the chosen LSP's. The LSP's should be able to resolve all imports automatically if neovim is started with a virtual environment. For example, if you use guix, if you do ```guix shell -D <package>``` and start Neovim inside this shell, all imports/definitions/references and refactor capabilities should be available to you out of the box. You may notice that there are no global formatters or linters set for Python. This is because some projects that I work on require different configurations per project, e.g Black and Flake8 for project A and Ruff and Semgrep for project B. There is a nice feature in Neovim, similar to the .vscode/ in VSCode where you can create a project specific lua file *.nvim.lua* in your project root; if you are working in a git repository, this would be at the same tree level as a .gitignore, or .git folder. Please see a below example of how you can set up this file.
 ~~~lua
 local conform = require("conform")
 conform.setup({
@@ -66,9 +68,13 @@ nvim-lint is a minimal and configurable plugin that integrates with external lin
 - *gitsigns*
 gitsigns.nvim provides Git integration by displaying inline Git changes, such as added, modified, or deleted lines in the sign column, and offers features like staging, reverting changes, hunk previews, and live blame, enhancing version control workflows within the editor.
 
-2) **.tmux.conf** This is the tmux configuration file. This is where you can set all the necessary keybindings and plugins. The plugins in the config file are installed by the tmux plugin manager (see prerequisites), unlike Neovim though you have to manually tell by tpm to install the plugins by doing Prefix + I. By default the Prefix for tmux is Ctrl + B, however I have remapped this to Ctrl + A as its more comfortable to type on your standard column staggered QWERTY keyboard.
+2) **dot-tmux.conf** This is the tmux configuration file. This is where you can set all the necessary keybindings and plugins. The plugins in the config file are installed by the tmux plugin manager (see prerequisites), unlike Neovim though you have to manually tell by tpm to install the plugins by doing Prefix + I. By default the Prefix for tmux is Ctrl + B, however I have remapped this to Ctrl + A as its more comfortable to type on your standard column staggered QWERTY keyboard. You will need to install the Tmux plugin manager which can be found here https://github.com/tmux-plugins/tpm. The installation is very simple and complete instructions are available on the link. Please read the tpm documentation carefully because there are some things you need to do in order to ensure that the plugins are working as expected. (Main pitfall is usually people forgetting to do Prefix + I to install the plugins after you have added them)
 
-3) **.zshrc** - This is purely personal preference. I happen to like the customizability of Zsh, with the ability to have plugins for git, themes, fzf and many many others. I'm yet to explore the full capability of this so I cannot say much on the topic.
+3) **dot-zshrc** - This is purely personal preference. I happen to like the customizability of Zsh, with the ability to have plugins for git, themes, fzf and many many others. I'm yet to explore the full capability of this so I cannot say much on the topic.
+
+4) **dot-oh-my-zsh** - This is tied to item 3) above. Oh my zsh provides some sensible defaults for the Zsh ecosystem as well as providing a framework to easily extend Zsh's functionality through the edition of custom plugins. Please see this link for more information - https://github.com/ohmyzsh/ohmyzsh?tab=readme-ov-file.
+
+5) **dot-tmux** - This is tied to item 2) above. This submodule houses the tmux plugin manager as well as the plugins installed by the plugin manager. Having this here means that you don't have to manually install the plugins - they should work out of the box. If they dont' I would recommend that you run Prefix + I to install the plugins followed by Prefix + r to reload tmux.
 
 ### Installation 
 Below is my recommend way of installing the setup.

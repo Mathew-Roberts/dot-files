@@ -39,9 +39,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 local set_var = function()
   print 'Setting PYTHONPATH and VIRTUAL_ENV for debugging'
-  local pypath = os.getenv 'GUIX_PYTHONPATH' .. ':' .. vim.fn.getcwd() .. '/src'
+  local pypath = os.getenv 'CONDA_PREFIX' .. '/lib/python3.11/site-packages' .. ':' .. vim.fn.getcwd() .. '/src'
   vim.env.PYTHONPATH = pypath
-  vim.env.VIRTUAL_ENV = os.getenv 'GUIX_ENVIRONMENT'
+  vim.env.VIRTUAL_ENV = os.getenv 'CONDA_PYTHON_EXE'
 end
 
 local unset_var = function()

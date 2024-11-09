@@ -1,0 +1,86 @@
+{
+  "window.zoomLevel": 1,
+  "material-icon-theme.hidesExplorerArrows": true,
+  "terminal.integrated.inheritEnv": true,
+  "terminal.integrated.fontFamily": "MesloLGS NF, monospace",
+  "terminal.integrated.tabs.enabled": false,
+  "python.defaultInterpreterPath": "/Users/mathewroberts/anaconda3/bin/python",
+  "python.analysis.autoImportCompletions": true,
+  "vim.leader": "<Space>",
+  "vim.highlightedyank.enable": true,
+  "vim.changeWordIncludesWhitespace": false,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-W>", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-W>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-W>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-W>", "l"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": [
+        "editor.action.formatDocument",
+        "editor.action.organizeImports"
+      ]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.sourceAction"]
+    }
+  ],
+  "workbench.colorTheme": "Aura Dracula Spirit",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": true,
+  "workbench.editor.showTabs": "none",
+  "workbench.layoutControl.enabled": false,
+  "workbench.tips.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.stickyScroll.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.fontFamily": "MesloLGS NF, monospace",
+  "editor.guides.indentation": false,
+  "editor.renderLineHighlight": "none",
+  "editor.hover.enabled": false,
+  "editor.overviewRulerBorder": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontLigatures": true,
+  "breadcrumbs.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false
+}

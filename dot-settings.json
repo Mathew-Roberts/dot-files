@@ -1,14 +1,23 @@
 {
   "window.zoomLevel": 1,
   "material-icon-theme.hidesExplorerArrows": true,
+  "window.title": " ",
+  "breadcrumbs.enabled": false,
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.fontFamily": "MesloLGS NF, monospace",
   "terminal.integrated.tabs.enabled": false,
   "python.defaultInterpreterPath": "/Users/mathewroberts/anaconda3/bin/python",
   "python.analysis.autoImportCompletions": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "vim.leader": "<Space>",
   "vim.highlightedyank.enable": true,
   "vim.changeWordIncludesWhitespace": false,
+  "vim.useSystemClipboard": true,
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
@@ -61,10 +70,11 @@
   "workbench.tree.renderIndentGuides": "none",
   "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "hidden",
-  "workbench.statusBar.visible": true,
-  "workbench.editor.showTabs": "none",
   "workbench.layoutControl.enabled": false,
   "workbench.tips.enabled": false,
+  "workbench.statusBar.visible": true,
+  "workbench.editor.showTabs": "none",
+  "editor.lightbulb.enabled": "off",
   "editor.lineNumbers": "relative",
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingQuotes": "always",
@@ -80,7 +90,8 @@
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontLigatures": true,
-  "breadcrumbs.enabled": false,
+  "editor.hideCursorInOverviewRuler": true,
   "explorer.confirmDragAndDrop": false,
-  "explorer.compactFolders": false
+  "explorer.compactFolders": false,
+  "window.commandCenter": false
 }

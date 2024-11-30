@@ -150,6 +150,7 @@ return { -- LSP Configuration & Plugins
           },
         },
       },
+      rust_analyzer = {},
     }
 
     require('mason').setup()

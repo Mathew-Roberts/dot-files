@@ -5,7 +5,7 @@ return { -- Autoformat
     {
       '<leader>f',
       function()
-        require('conform').format { async = true, lsp_format = 'never' }
+        require('conform').format { async = true, lsp_format = 'fallback' }
       end,
       mode = '',
       desc = '[F]ormat buffer',
@@ -28,6 +28,7 @@ return { -- Autoformat
       json = { 'fixjson' },
       cpp = { 'clang-format' },
       python = { 'ruff_organize_imports', 'ruff_format', 'ruff_fix' },
+      rust = { 'rustfmt' },
     },
   },
 }

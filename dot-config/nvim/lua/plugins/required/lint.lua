@@ -8,6 +8,7 @@ return {
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
         json = { 'jsonlint' },
+        python = { 'mypy' },
       }
       -- Create autocommand which carries out the actual linting
       -- on the specified events.

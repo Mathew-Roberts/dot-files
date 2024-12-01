@@ -138,6 +138,7 @@ return { -- LSP Configuration & Plugins
     local servers = {
       basedpyright = { settings = { basedpyright = { typeCheckingMode = 'off' } } },
       jsonls = {},
+      ruff = {},
       clangd = {},
       lua_ls = {
         settings = {
@@ -150,16 +151,18 @@ return { -- LSP Configuration & Plugins
           },
         },
       },
+      rust_analyzer = {},
     }
 
     require('mason').setup()
 
-    -- You can add other tools here that you want Mason to install
-    -- for you, so that they are available from within Neovim.
     local ensure_installed = vim.tbl_keys(servers or {})
 
-    local extra_installs = { 'flake8', 'mypy', 'markdownlint', 'jsonlint', 'stylua', 'isort', 'black', 'ruff', 'fixjson', 'debugpy', 'clang-format' }
-    vim.list_extend(ensure_installed, extra_installs)
+    local linters = { 'mypy', 'markdownlint', 'jsonlint' }
+    local formatters = { 'stylua', 'fixjson', 'clang-format', 'rustfmt' }
+
+    vim.list_extend(ensure_installed, linters)
+    vim.list_extend(ensure_installed, formatters)
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {

@@ -5,7 +5,7 @@ return { -- Autoformat
     {
       '<leader>f',
       function()
-        require('conform').format { async = true, lsp_fallback = true }
+        require('conform').format { async = true, lsp_format = 'fallback' }
       end,
       mode = '',
       desc = '[F]ormat buffer',
@@ -20,13 +20,15 @@ return { -- Autoformat
       local disable_filetypes = { c = true, cpp = true }
       return {
         timeout_ms = 500,
-        lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
+        dry_run = disable_filetypes[vim.bo[bufnr].filetype],
       }
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
       json = { 'fixjson' },
       cpp = { 'clang-format' },
+      python = { 'ruff_organize_imports', 'ruff_format', 'ruff_fix' },
+      rust = { 'rustfmt' },
     },
   },
 }

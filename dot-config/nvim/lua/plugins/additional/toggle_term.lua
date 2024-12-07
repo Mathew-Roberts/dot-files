@@ -4,7 +4,7 @@ return {
   version = '*',
   config = function()
     require('toggleterm').setup {
-      open_mapping = '<C-s>', -- Set <C-s> to toggle the terminal
+      open_mapping = '<C-\\>', -- Set <C-s> to toggle the terminal
       direction = 'float', -- Open terminal as a floating window
       float_opts = {
         border = 'curved', -- Customize border style (options: single, double, shadow, etc.)

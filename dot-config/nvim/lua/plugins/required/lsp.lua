@@ -135,10 +135,21 @@ return { -- LSP Configuration & Plugins
     --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+    --
+    local on_attach = function(client, bufnr)
+      if client.name == 'ruff' then
+        client.server_capabilities.hoverProvider = false
+      end
+    end
+
     local servers = {
-      basedpyright = { settings = { basedpyright = { typeCheckingMode = 'off' } } },
+      basedpyright = {
+        settings = {
+          basedpyright = { typeCheckingMode = 'off', analysis = { ignore = { '*' } } },
+        },
+      },
       jsonls = {},
-      ruff = {},
+      ruff = { on_attach = on_attach },
       clangd = {},
       lua_ls = {
         settings = {

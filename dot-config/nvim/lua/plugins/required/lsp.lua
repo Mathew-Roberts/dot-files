@@ -64,7 +64,7 @@ return { -- LSP Configuration & Plugins
       },
     }
 
-    opts = {
+    local opts = {
       servers = {
         basedpyright = {
           settings = {

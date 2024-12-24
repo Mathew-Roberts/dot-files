@@ -32,4 +32,7 @@ vim.keymap.set('n', '<C-]>', ':cnext<CR>', { desc = 'Go to next in quickfix list
 vim.keymap.set('n', '<C-[>', ':cprev<CR>', { desc = 'Go to previous in quickfix list' })
 vim.keymap.set('n', '[]', ':cclose<CR>', { desc = 'Close quick fix list' })
 
+-- basic list
+vim.keymap.set('v', '<leader>x', ':lua<CR>', { desc = 'Source this particular snippet of code' })
+
 -- vim: ts=2 sts=2 sw=2 et

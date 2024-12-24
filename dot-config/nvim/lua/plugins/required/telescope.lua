@@ -40,6 +40,11 @@ return { -- Fuzzy Finder (files, lsp, etc)
           require('telescope.themes').get_dropdown(),
         },
       },
+      pickers = {
+        find_files = { theme = 'ivy' },
+        live_grep = { theme = 'ivy' },
+        buffers = { theme = 'ivy' },
+      },
     }
 
     -- Enable Telescope extensions if they are installed

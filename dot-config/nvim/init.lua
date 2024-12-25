@@ -11,6 +11,8 @@ require 'vim.options'
 
 require 'vim.keymaps'
 
+require 'autocmds.autocmds'
+
 require 'lazy.bootstrap'
 
 require 'lazy.plugins'

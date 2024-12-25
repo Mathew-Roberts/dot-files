@@ -8,11 +8,11 @@ group('setIndent', { clear = true })
 cmd('Filetype', {
   group = 'setIndent',
   pattern = { 'lua', 'markdown', 'md', 'yaml' },
-  command = 'setlocal shiftwidth=2 tabstop=2',
+  command = 'setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab',
 })
 
 cmd('Filetype', {
   group = 'setIndent',
   pattern = { 'python', 'rust', 'json' },
-  command = 'setlocal shiftwidth=4 tabstop=4',
+  command = 'setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab',
 })

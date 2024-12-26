@@ -17,7 +17,7 @@ M.setup = function(config)
   config.keys = {
     -- Renaming tabs
     {
-      key = 'r',
+      key = ',',
       mods = 'LEADER',
       action = wezterm.action.PromptInputLine {
         description = 'Enter new name for tab',
@@ -36,7 +36,7 @@ M.setup = function(config)
       action = wezterm.action.ActivateCommandPalette,
     },
     {
-      key = 'n',
+      key = 'c',
       mods = 'LEADER',
       action = wezterm.action { SpawnTab = 'CurrentPaneDomain' },
     },
@@ -75,6 +75,41 @@ M.setup = function(config)
     { key = 'v', mods = 'SUPER', action = wezterm.action { PasteFrom = 'Clipboard' } },
 
     { key = 'F12', mods = '', action = wezterm.action.ToggleFullScreen },
+
+    -- Workspaces
+    {
+      key = ';',
+      mods = 'LEADER',
+      action = wezterm.action.PromptInputLine {
+        description = wezterm.format {
+          { Attribute = { Intensity = 'Bold' } },
+          { Foreground = { AnsiColor = 'Fuchsia' } },
+          { Text = 'Enter name for new workspace' },
+        },
+        action = wezterm.action_callback(function(window, pane, line)
+          -- line will be `nil` if they hit escape without entering anything
+          -- An empty string if they just hit enter
+          -- Or the actual line of text they wrote
+          if line then
+            window:perform_action(
+              wezterm.action.SwitchToWorkspace {
+                name = line,
+              },
+              pane
+            )
+          end
+        end),
+      },
+    },
+    {
+      key = '%',
+      mods = 'LEADER',
+      action = wezterm.action.ShowLauncherArgs {
+        flags = 'FUZZY|WORKSPACES',
+      },
+    },
+    { key = ')', mods = 'LEADER', action = wezterm.action.SwitchWorkspaceRelative(1) },
+    { key = '(', mods = 'LEADER', action = wezterm.action.SwitchWorkspaceRelative(-1) },
   }
 end
 

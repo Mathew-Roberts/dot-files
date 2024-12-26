@@ -8,9 +8,9 @@ wezterm.on('update-right-status', function(window, pane)
   window:set_right_status(window:active_workspace())
 end)
 
-local opts = require 'opts'
-local keys = require 'keymaps'
-local move = require 'move'
+local opts = require 'lua.opts'
+local keys = require 'lua.keymaps'
+local move = require 'lua.move'
 
 opts.setup(config)
 keys.setup(config)

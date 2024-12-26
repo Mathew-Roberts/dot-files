@@ -15,6 +15,8 @@ M.setup = function(config)
     },
   }
   config.keys = {
+    -- Hiding the application
+    { key = 'h', mods = 'SUPER', action = wezterm.action.HideApplication },
     -- Renaming tabs
     {
       key = ',',

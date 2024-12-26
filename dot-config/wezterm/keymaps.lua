@@ -79,6 +79,8 @@ M.setup = function(config)
     { key = 'F12', mods = '', action = wezterm.action.ToggleFullScreen },
 
     -- Workspaces
+
+    -- Create new named workspace
     {
       key = ';',
       mods = 'LEADER',
@@ -89,9 +91,6 @@ M.setup = function(config)
           { Text = 'Enter name for new workspace' },
         },
         action = wezterm.action_callback(function(window, pane, line)
-          -- line will be `nil` if they hit escape without entering anything
-          -- An empty string if they just hit enter
-          -- Or the actual line of text they wrote
           if line then
             window:perform_action(
               wezterm.action.SwitchToWorkspace {
@@ -103,6 +102,7 @@ M.setup = function(config)
         end),
       },
     },
+    -- Open workspace selector
     {
       key = '%',
       mods = 'LEADER',

@@ -15,6 +15,9 @@ M.setup = function(config)
     },
   }
   config.keys = {
+    -- Resize the application
+    { key = '-', mods = 'SUPER', action = wezterm.action.DecreaseFontSize },
+    { key = '+', mods = 'SUPER', action = wezterm.action.IncreaseFontSize },
     -- Hiding the application
     { key = 'h', mods = 'SUPER', action = wezterm.action.HideApplication },
     -- Renaming tabs

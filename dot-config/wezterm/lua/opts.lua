@@ -10,7 +10,6 @@ M.setup = function(config)
   config.window_background_opacity = 0.8
   config.macos_window_background_blur = 10
   config.window_padding = {
-    top = 0,
     bottom = 0,
   }
 end

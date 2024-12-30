@@ -10,7 +10,7 @@ function M.setup(config)
         enabled = false,
       },
       username = {
-        enabled = false,
+        enabled = true,
       },
       hostname = {
         enabled = false,

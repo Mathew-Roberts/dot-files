@@ -28,9 +28,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- quickfix list
-vim.keymap.set('n', '<C-]>', ':cnext<CR>', { desc = 'Go to next in quickfix list' })
-vim.keymap.set('n', '<C-[>', ':cprev<CR>', { desc = 'Go to previous in quickfix list' })
-vim.keymap.set('n', '[]', ':cclose<CR>', { desc = 'Close quick fix list' })
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'qf',
+  callback = function()
+    -- local opts = { buffer = true, noremap = true, silent = true }
+    vim.keymap.set('n', '<C-n>', ':cnext<CR>')
+    vim.keymap.set('n', '<C-p>', ':cprev<CR>')
+    vim.keymap.set('n', '<Esc>', ':cclose<CR>')
+  end,
+})
 
 -- basic list
 vim.keymap.set('v', '<leader>x', ':lua<CR>', { desc = 'Source this particular snippet of code' })

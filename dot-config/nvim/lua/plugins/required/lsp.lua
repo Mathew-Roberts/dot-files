@@ -5,7 +5,17 @@ return { -- LSP Configuration & Plugins
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     { 'j-hui/fidget.nvim', opts = {} },
-    { 'folke/neodev.nvim', opts = {} },
+    {
+      'folke/lazydev.nvim',
+      ft = 'lua', -- only load on lua files
+      opts = {
+        library = {
+          -- See the configuration section for more details
+          -- Load luvit types when the `vim.uv` word is found
+          { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
+        },
+      },
+    },
     { 'saghen/blink.cmp' },
   },
   config = function()
@@ -66,18 +76,12 @@ return { -- LSP Configuration & Plugins
 
     local opts = {
       servers = {
-        basedpyright = {
-          settings = {
-            basedpyright = { typeCheckingMode = 'off', analysis = { ignore = { '*' } } },
-          },
-        },
         jsonls = {},
         ruff = {
           on_attach = function(client, bufnr)
             client.server_capabilities.hoverProvider = false
           end,
         },
-        clangd = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -88,7 +92,7 @@ return { -- LSP Configuration & Plugins
             },
           },
         },
-        rust_analyzer = {},
+        pyrefly = {},
       },
     }
 
@@ -102,10 +106,10 @@ return { -- LSP Configuration & Plugins
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     -- Setup LSPs and setting up completion capabilities
-    local lspconfig = require 'lspconfig'
     for server, config in pairs(opts.servers) do
       config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-      lspconfig[server].setup(config)
+      vim.lsp.config(server, config)
+      vim.lsp.enable(server)
     end
   end,
 }

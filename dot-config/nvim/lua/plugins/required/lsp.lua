@@ -101,8 +101,10 @@ return { -- LSP Configuration & Plugins
     local ensure_installed = vim.tbl_keys(opts.servers)
     local linters = { 'mypy', 'markdownlint', 'jsonlint' }
     local formatters = { 'stylua', 'fixjson', 'clang-format', 'rustfmt' }
+    local debuggers = { 'debugpy' }
     vim.list_extend(ensure_installed, linters)
     vim.list_extend(ensure_installed, formatters)
+    vim.list_extend(ensure_installed, debuggers)
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     -- Setup LSPs and setting up completion capabilities

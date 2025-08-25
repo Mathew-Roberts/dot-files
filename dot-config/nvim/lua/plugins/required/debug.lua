@@ -8,7 +8,7 @@ return {
       dm.plugins.osv_integration.enabled = true -- needed if you want to debug neovim lua code
 
       local dap = require 'dap'
-      vim.keymap.set('n', '<F5>', dap.continue, { desc = 'Debug: Start/Continue' })
+      vim.keymap.set('n', '<leader>dc', dap.continue, { desc = 'Debug: Start/Continue' })
       vim.keymap.set('n', '<leader>dt', dap.terminate, { desc = 'Debug: Terminate Session' })
       vim.keymap.set('n', '<leader>dr', dap.restart, { desc = 'Debug: Restart Session' })
       -- local path = '~/.local/share/nvim/mason/packages/debugpy/venv/bin/python'

@@ -13,7 +13,7 @@ return {
       vim.keymap.set('n', '<leader>dr', dap.restart, { desc = 'Debug: Restart Session' })
       -- local path = '~/.local/share/nvim/mason/packages/debugpy/venv/bin/python'
       -- require('dap-python').setup(path)
-      require('dap-python').setup 'uv'
+      -- require('dap-python').setup 'uv'
     end,
   },
 }
